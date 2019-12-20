@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <h1>SM TechBox</h1>
+</header>
+<body>
+    <div id="corpo">
+        <h2>Lista de arquivos</h2>
+        <form action="/principal/deletado" method="POST">
+            <ul>
+                {{#each arquivo}}
+                <li>
+                    <input type="checkbox" id="arquivos" name="arquivos" value="{{this.Key}}">
+                    {{this.Key}}
+
+                </li>
+                {{/each}}
+            </ul>
+            <input id="btSubmit" type="submit" value="Deletar">
+        </form>
+        <form action="/principal/upload" enctype="multipart/form-data" method="post">
+            <input type="file" name="upload" id="upload">
+            <input id="btSubmit" type="submit" value="Upload">
+        </form>
+        <p id="logout">Para deslogar click <a href="/logout">aqui</a> </p>
+    </div>
+</body>
+
+</html>

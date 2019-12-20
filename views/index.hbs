@@ -1,29 +1,10 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>SM Tech</title>
-</head>
+<header>
+    <h1>SM TechBox</h1>
+</header>
 
 <body>
-
-    <form action="/deletado" method="POST" >
-        <ul>
-            {{#each arquivo}}
-            <li>
-                <input type="checkbox" id="arquivos"  name="arquivos"  value= "{{this.Key}}" >
-                {{this.Key}}
-
-            </li>
-            {{/each}}
-        </ul>
-        <input type="submit" value="Deletar">
-    </form>
-    <form action="/" enctype="multipart/form-data" method="post">
-        <input type="file" name="upload">
-        <input type="submit" value="Upload">
-    </form>
-    
+    <div id="corpo">
+        <h2>Bem Vindo ao SM TECH BOX</h2>
+        <a href="auth/github"> Login</a>
+    </div>
 </body>
-
-</html>

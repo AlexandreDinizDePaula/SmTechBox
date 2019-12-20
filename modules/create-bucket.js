@@ -1,19 +1,13 @@
 const AWS = require('aws-sdk');
-
-// Enter copied or downloaded access ID and secret key here
-const ID = 'AKIA4OYJ4MIIK77BDNO6';
-const SECRET = '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';
-
-// The name of the bucket that you have created
-const BUCKET_NAME = 'projeto-nodejs';
+const chaves = require('../modules/chaves');
 
 const s3 = new AWS.S3({
-    accessKeyId: ID,
-    secretAccessKey: SECRET
+  accessKeyId: chaves.id,
+  secretAccessKey: chaves.secret
 });
 
 const params = {
-    Bucket: BUCKET_NAME,
+    Bucket: chaves.bucketName,
     CreateBucketConfiguration: {
         // Set your region here
         LocationConstraint: "eu-west-1"
