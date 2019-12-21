@@ -22,7 +22,7 @@ passport.authenticate('github'));
 router.get('oauth/token',
 passport.authenticate('github', { failureRedirect: '/login' }),
 function(req, res) {
-// Successful authentication, redirect home.
+// Successful authentication, redirect hom
 
 res.redirect('/principal');
 });
