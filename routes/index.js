@@ -16,10 +16,10 @@ router.get('/', function(req, res, next) {
 res.render('index');
 });
 
-router.get('/auth/github',
+router.get('/oauth/authorize',
 passport.authenticate('github'));
 
-router.get('/auth/github/callback',
+router.get('oauth/token',
 passport.authenticate('github', { failureRedirect: '/login' }),
 function(req, res) {
 // Successful authentication, redirect home.
