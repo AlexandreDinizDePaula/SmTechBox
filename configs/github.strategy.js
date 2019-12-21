@@ -6,7 +6,7 @@ passport.use(
     {
       clientID: "6a6e0f54491673f8956c",
       clientSecret: "dbea27060e3f414d8e99aedc4cb2c3f5d0bdc644",
-      callbackURL: "https://smtechbox.heroku.com/oauth/authorize"
+      callbackURL: "http://localhost:3000/auth/github/callback"
     },
     function(accessToken, refreshToken, profile, done) {
       if (profile) {
