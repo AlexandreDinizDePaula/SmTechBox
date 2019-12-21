@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const passport = require('passport');
 
-var indexRouter = require('./routes/index');
+var indexRouter = require('./app/index');
 const principalRouter = require('./routes/principal');
 const loginRouter = require('./routes/login');
 const logoutRouter = require('./routes/logout');
