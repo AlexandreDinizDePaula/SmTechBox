@@ -1,1 +1,1 @@
-web: node C:/Users/alexa/Desktop/Curso FS/trabalho-final-node/routes/index.js
+web: node index.js
