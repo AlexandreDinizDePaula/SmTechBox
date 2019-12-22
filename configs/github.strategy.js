@@ -9,14 +9,13 @@ passport.use(
       callbackURL: "https://smtechbox.heroku.com/auth/github/callback"
     },
     function(accessToken, refreshToken, profile, done) {
-      if (profile) {
-        user = profile;
-        
-        return done(null, user);
-      } else {
-        return done(null, false);
+      const onError = () => {
+        console.log('Ocorreu um erro!')
       }
-    }));
+
+      return done(undefined, profile);
+    }
+    ));
 
 passport.serializeUser(function(user, done) {
   const onError = () => {
