@@ -4,8 +4,8 @@ const GitHubStrategy = require("passport-github").Strategy;
 passport.use(
   new GitHubStrategy(
     {
-      clientID: "6a6e0f54491673f8956c",
-      clientSecret: "dbea27060e3f414d8e99aedc4cb2c3f5d0bdc644",
+      clientID: "seu id",
+      clientSecret: "sua senha",
       callbackURL: "http://smtechbox.heroku.com/auth/github/callback"
     },
     function(accessToken, refreshToken, profile, done) {
